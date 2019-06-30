@@ -1,7 +1,7 @@
 {
-    "name": "pixi-textinput",
-    "version": "4.0.0-beta.3",
-    "description": "Textinput for pixi v5.",
+    "name": "pixi-textinput-v5",
+    "version": "4.0.0-beta.1",
+    "description": "Textinput for pixi v5, webpack, typescript",
     "main": "dist/pixiTextInput.js",
     "module": "dist/pixiTextInput.es.js",
     "types": "@types/index.d.ts",
@@ -16,7 +16,7 @@
         "test": "mocha",
         "coverage": "nyc mocha",
         "build": "rollup -c",
-        "prepublishOnly": "yarn test && yarn run build && yarn run builds && yarn run docs",
+        "prepublishOnly": "yarn run build",
         "builds-rollup": "rollup -c docs/builds/rollup/rollup.config.js",
         "builds-standalone": "cp dist/pixiTextInput.js* docs/",
         "builds-typescript": "rollup -c docs/builds/ts/rollup.config.js",
@@ -30,15 +30,11 @@
     "keywords": [
         "PIXI",
         "pixi.js",
-        "viewport",
-        "zoom",
-        "scroll",
-        "pinch",
-        "stage",
-        "bounce",
-        "decelerate"
+        "textinput",
+        "custom input",
+        "rebuild input"
     ],
-    "author": "David Figatner",
+    "author": "jjHesk Heskeyo",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/ONode/pixi-textinput/issues"
