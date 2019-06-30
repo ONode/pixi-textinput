@@ -10,6 +10,10 @@ The input itself is a HTML `<input>` element, which is positioned above the stag
 # Installing
 Include the `dist/PIXI.TextInput.js` or `dist/PIXI.TextInput.min.js` in your html document after pixi.js.
 
+
+![](https://user-images.githubusercontent.com/629338/60394403-77264400-9b56-11e9-8497-4859464e263e.png)
+
+
 A [npm package](https://www.npmjs.com/package/pixi-textinput-v5) is available as well: `npm i pixi-textinput-v5`
 
 # Documentation
