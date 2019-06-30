@@ -1,21 +1,16 @@
 
-# PIXI.TextInput - Plugin for pixi.js v5.0.2
-![](http://manuelotto.com/opensource/PIXI.TextInput/img/preview.png)
+# TextInput - Plugin for pixi.js v5.0.2
+
+[![npm version](http://img.shields.io/npm/v/REPO.svg?style=flat)](https://npmjs.org/package/pixi-textinput-v5 "View this project on npm")
 
 # About
-
 This plugin for pixi.js provides a convenient way of adding text inputs to the pixijs-stage. 
 The input itself is a HTML `<input>` element, which is positioned above the stage according to the transformation given by the PIXI-DisplayObject. The box is drawn on the PIXI-stage. Additionally, you can choose whether the plugin should substitute the `<input>` with a native pixi-Text when the textfield has no focus.
-
-# Demos
-[Demo with default box generator](http://manuelotto.com/opensource/PIXI.TextInput/demos/demo_default.html)
-
-[Demo with custom box generator](http://manuelotto.com/opensource/PIXI.TextInput/demos/demo_custom.html)
 
 # Installing
 Include the `dist/PIXI.TextInput.js` or `dist/PIXI.TextInput.min.js` in your html document after pixi.js.
 
-A [npm package](https://www.npmjs.com/package/pixi-text-input) is available as well: `npm i pixi-textinput-v5`
+A [npm package](https://www.npmjs.com/package/pixi-textinput-v5) is available as well: `npm i pixi-textinput-v5`
 
 # Documentation
 The TextInput behaves just like any other PIXI-DisplayObject. It inherits from `PIXI.Container` and has all the associated properties like `width`, `height`, `rotation`, `scale` ,`alpha`, [etc.](http://pixijs.download/dev/docs/PIXI.Container.html)
@@ -37,6 +32,15 @@ babel usage:
 **box** : object | function
 
 >Either an object describing the style of the box using the default box generator, or a function which returns your own custom generated box.
+
+![](http://manuelotto.com/opensource/PIXI.TextInput/img/preview.png)
+
+
+# Demos
+[Demo with default box generator](http://manuelotto.com/opensource/PIXI.TextInput/demos/demo_default.html)
+
+[Demo with custom box generator](http://manuelotto.com/opensource/PIXI.TextInput/demos/demo_custom.html)
+
 
 ## Styling the input
 You can apply any CSS styles. You have to use the camcelCase property names, though.
