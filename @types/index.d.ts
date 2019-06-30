@@ -24,7 +24,7 @@ export declare class TextInput extends PIXI.Container {
     _dom_input: object
     _placeholder: string
     _placeholderColor: number
-    _selection: Array<number>
+    _selection: number[]
     _restrict_value: string
     _restrict_regex: RegExp
     _substituted: string
@@ -118,7 +118,7 @@ export declare class TextInput extends PIXI.Container {
 
     _updateSurrogateHitbox(bounds: PIXI.Bounds): void
 
-    _updateSurrogateMask(bounds: PIXI.Bounds, paddings: Array<number>): void
+    _updateSurrogateMask(bounds: PIXI.Bounds, paddings: number[]): void
 
     _destroySurrogate(): void
 
@@ -153,7 +153,32 @@ export declare class TextInput extends PIXI.Container {
     _comparePixiMatrices(m1: object, m2: object): void
 
     _compareClientRects(r1: object, r2: object): void
-
-
 }
 
+
+interface ButtonOptions {
+    anchor?: number
+    x?: number
+    y?: number
+    textureButton?: PIXI.Texture
+    textureButtonDown?: PIXI.Texture
+    textureButtonOver?: PIXI.Texture
+}
+
+type BUTTON_STATUS = 'BUTTONDOWN' | 'BUTTONCONFIRM' | 'BUTTONUP' | 'BUTTONOVER' | 'BUTTONOUT' | string
+
+export declare class ButtonTexture extends PIXI.utils.EventEmitter {
+
+    _options: ButtonOptions
+    button: Sprite
+
+    constructor(options?: ButtonOptions)
+
+    protected onButtonDown(): void
+
+    protected onButtonUp(): void
+
+    protected onButtonOver(): void
+
+    getButtonFace(): Sprite
+}

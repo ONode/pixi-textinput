@@ -1,6 +1,6 @@
 {
     "name": "pixi-textinput-v5",
-    "version": "4.0.0-beta.1",
+    "version": "4.0.0-beta.3",
     "description": "Textinput for pixi v5, webpack, typescript",
     "main": "dist/pixiTextInput.js",
     "module": "dist/pixiTextInput.es.js",

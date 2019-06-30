@@ -3,44 +3,45 @@ import { terser } from 'rollup-plugin-terser'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 
+
 export default [
     {
-        input: 'src/input.js',
-        plugins: [
-            peerDepsExternal(),
-            resolve(
+        input : 'src/index.js',
+        plugins : [
+            peerDepsExternal (),
+            resolve (
                 {
-                    preferBuiltins: false
+                    preferBuiltins : false
                 }),
-            commonjs(),
-            terser()
+            commonjs (),
+            terser ()
         ],
-        output:
+        output :
             {
-                file: 'dist/pixiTextInput.js',
-                globals:
+                file : 'dist/pixiTextInput.js',
+                globals :
                     {
-                        'pixi.js': 'PIXI'
+                        'pixi.js' : 'PIXI'
                     },
-                format: 'umd',
-                name: 'Viewport',
-                sourcemap: true
+                format : 'umd',
+                name : 'ButtonTexture',
+                sourcemap : true
             }
     },
     {
-        input: 'src/input.js',
-        plugins: [
-            peerDepsExternal(),
-            resolve(
+        input : 'src/index.js',
+        plugins : [
+            peerDepsExternal (),
+            resolve (
                 {
-                    preferBuiltins: false
+                    preferBuiltins : false
                 }),
-            commonjs()
+            commonjs ()
         ],
-        output:
+        output :
             {
-                file: 'dist/pixiTextInput.es.js',
-                format: 'esm',
-                sourcemap: true
+                file : 'dist/pixiTextInput.es.js',
+                format : 'esm',
+                sourcemap : true
             }
     }]
