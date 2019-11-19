@@ -21,7 +21,7 @@ export declare class TextInput extends PIXI.Container {
     _previous: object
     _dom_added: boolean
     _dom_visible: boolean
-    _dom_input: object
+    _dom_input: HTMLInputElement
     _placeholder: string
     _placeholderColor: number
     _selection: number[]
@@ -35,28 +35,28 @@ export declare class TextInput extends PIXI.Container {
 
     constructor(options?: TextInputOptions)
 
-    get substituteText(): string
-    substituteText(substitute: string): void
+    get substituteText(): boolean
+    set substituteText(substitute: boolean): void
 
     get placeholder(): string
-    placeholder(text: string): void
+    set placeholder(text: string): void
 
     get disabled(): boolean
-    disabled(n: boolean): void
+    set disabled(n: boolean): void
 
     get maxLength(): number
-    maxLength(length: number): void
+    set maxLength(length: number): void
 
     get restrict(): RegExp
-    restrict(regex: RegExp): void
+    set restrict(regex: RegExp): void
 
-    htmlInput(): object
+    htmlInput(): HTMLInputElement
 
 
     text(): string
     text(text: string): void
 
-    htmlInput(): object
+    htmlInput(): HTMLInputElement
 
     focus(): void
 
