@@ -21,7 +21,7 @@ export declare class TextInput extends PIXI.Container {
     _previous: object
     _dom_added: boolean
     _dom_visible: boolean
-    _dom_input: object
+    _dom_input: HTMLInputElement
     _placeholder: string
     _placeholderColor: number
     _selection: number[]
@@ -50,13 +50,13 @@ export declare class TextInput extends PIXI.Container {
     get restrict(): RegExp
     set restrict(regex: RegExp): void
 
-    htmlInput(): object
+    htmlInput(): HTMLInputElement
 
 
     text(): string
     text(text: string): void
 
-    htmlInput(): object
+    htmlInput(): HTMLInputElement
 
     focus(): void
 
