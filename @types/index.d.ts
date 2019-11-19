@@ -35,20 +35,20 @@ export declare class TextInput extends PIXI.Container {
 
     constructor(options?: TextInputOptions)
 
-    get substituteText(): string
-    substituteText(substitute: string): void
+    get substituteText(): boolean
+    set substituteText(substitute: boolean): void
 
     get placeholder(): string
-    placeholder(text: string): void
+    set placeholder(text: string): void
 
     get disabled(): boolean
-    disabled(n: boolean): void
+    set disabled(n: boolean): void
 
     get maxLength(): number
-    maxLength(length: number): void
+    set maxLength(length: number): void
 
     get restrict(): RegExp
-    restrict(regex: RegExp): void
+    set restrict(regex: RegExp): void
 
     htmlInput(): object
 
